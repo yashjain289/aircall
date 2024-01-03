@@ -12,12 +12,18 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "@styled-icons/bootstrap": "^10.47.0",
+    "@styled-icons/fa-regular": "^10.47.0",
+    "@styled-icons/fa-solid": "^10.47.0",
+    "@styled-icons/feather": "^10.47.0",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-swipeable-list": "^1.9.3"
   },
   "devDependencies": {
     "babel-core": "6.26.*",
     "babel-loader": "7.1.*",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.*",
     "css-loader": "2.1.*",

@@ -1,0 +1,142 @@
+.control-panel-container {
+    border-top: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-color: white;
+
+    .phone-container {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 50%;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-color: rgb(42, 196, 32);
+            position: relative;
+            bottom: 1px;
+            left: calc(50% / 2);
+            transition: all 0.1s ease;
+        }
+
+        .phone-icon-container {
+            padding: 14px 10px;
+            cursor: pointer;
+            width: 22px;
+            min-width: 16px;
+            transition: box-shadow 0.2s ease, transform 0.07s ease, background-color 0.07s ease;
+        }
+
+        svg {
+            fill: #333333;
+        }
+    }
+
+    .contact-container {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 50%;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-color: rgb(42, 196, 32);
+            position: absolute;
+            bottom: 1px;
+            left: calc(50% / 2);
+            transition: all 0.1s ease;
+        }
+
+        .contact-icon-container {
+            cursor: pointer;
+            stroke-width: 2;
+            width: 22px;
+            min-width: 16px;
+            padding: 14px 10px;
+        }
+    }
+
+    .grid-container {
+        position: absolute;
+        transform: translateY(-16px);
+        border-radius: 50%;
+        border: 1px solid lightgrey;
+        padding: 5px;
+        background-color: white;
+        cursor: pointer;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
+
+        .green-container {
+            background: linear-gradient(145deg, #2dd222, #26b01d);
+            border-radius: 50%;
+            padding: 15px;
+            transition: background 0.1s ease;
+
+            &:hover {
+                background: linear-gradient(145deg, #28bd1d, #219f18);
+            }
+
+            &:active {
+                background: linear-gradient(145deg, #26b01d, #2dd222);
+            }
+
+            .grid-icon-container {
+                width: 30px;
+                color: #333333;
+                fill: white;
+                min-width: 16px;
+            }
+        }
+    }
+
+    .settings-container {
+        position: relative;
+        margin-left: 45px;
+
+        &::after {
+            content: "";
+            width: 50%;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-color: rgb(42, 196, 32);
+            position: absolute;
+            bottom: 1px;
+            left: calc(50% / 2);
+            transition: all 0.1s ease;
+        }
+
+        .settings-icon-container {
+            stroke-width: 2;
+            width: 22px;
+            min-width: 16px;
+            padding: 14px 10px;
+            cursor: pointer;
+        }
+    }
+
+    .dot-container {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 50%;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-color: rgb(42, 196, 32);
+            position: absolute;
+            bottom: 1px;
+            left: calc(50% / 2);
+            transition: all 0.1s ease;
+        }
+
+        .dot-icon-container {
+            stroke-width: 2;
+            width: 22px;
+            min-width: 16px;
+            padding: 14px 10px;
+            cursor: pointer;
+        }
+    }
+}

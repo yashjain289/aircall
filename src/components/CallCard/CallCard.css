@@ -1,0 +1,136 @@
+.call-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .call-date-container {
+        font-weight: 700;
+        color: darkgrey;
+        font-size: 0.6rem;
+        position: relative;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+
+        &:before {
+            content: "";
+            width: 190%;
+            border-bottom: 1px dashed lightgrey;
+            position: absolute;
+            bottom: 3px;
+            left: -180px;
+        }
+
+        &:after {
+            content: "";
+            width: 190%;
+            border-bottom: 1px dashed lightgrey;
+            position: absolute;
+            bottom: 3px;
+            right: -180px;
+        }
+    }
+
+    .swipeable-list {
+        width: 100%;
+
+        .swipeable-list-item {
+            display: flex;
+            align-items: center;
+    
+            .swipeable-list-item__content {
+                margin-bottom: 10px;
+                width: 100%;
+    
+                .call-detail-container {
+                    width: 100%;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid lightgrey;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 10px 0;
+                    transition: box-shadow 0.2s ease, transform 0.07s ease, background-color 0.07s ease;
+                    user-select: none;
+            
+                    &:hover {
+                        box-shadow: 1px 2px 5px #d5d5d5, -1px -2px 5px #ffffff;
+                    }
+            
+                    &:active {
+                        background-color: rgb(245, 245, 245);
+                        transform: translateY(2px);
+                        box-shadow: none;
+                    }
+            
+                    .call-from-container {
+                        font-weight: 700;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        overflow-y: hidden;
+            
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+            
+                        .call-via-container {
+                            color: darkgrey;
+                            font-weight: 500;
+                            padding-top: 4px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .call-time-container {
+                        display: flex;
+                        font-weight: 700;
+                        color: darkgrey;
+                        font-size: 12px;
+
+                        #ampm {
+                            border: 1px solid lightgrey;
+                            padding: 3px 5px;
+                            border-right: none;
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                            font-size: 10px;
+                        }
+
+                        #time {
+                            display: flex;
+                            padding-right: 4px;
+                            padding-left: 5px;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            .swipeable-list-item__trailing-actions  .swipe-action .archive-swipe-container {
+                display: flex;
+                height: 100%;
+                -webkit-box-align: center;
+                box-sizing: border-box;
+                align-items: center;
+                padding: 8px;
+                color: rgb(238, 238, 238);
+                user-select: none;
+                border-radius: 10px;
+            
+                .undo-container {
+                    padding: 0 15px;
+                }
+            
+                .archive-icon-container {
+                    width: 20px;
+                    stroke-width: 2;
+                    padding: 0 15px;
+                    min-width: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.call-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .call-detail-container {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid lightgrey;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        width: 100%;
+        padding: 10px 0;
+        transition: box-shadow 0.2s ease, transform 0.07s ease, background-color 0.07s ease;
+        user-select: none;
+
+        &:hover {
+            box-shadow: 1px 2px 5px #d5d5d5, -1px -2px 5px #ffffff;
+        }
+
+        &:active {
+            background-color: rgb(245, 245, 245);
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+
+        .archive-icon-container {
+            width: 20px;
+            stroke-width: 2;
+            padding: 0 15px;
+            min-width: 24px;
+        }
+
+        .undo-container {
+            padding: 0 15px;
+        }
+    }
+}
